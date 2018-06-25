@@ -50,8 +50,41 @@ namespace InvoiceApp
                     {
                         var name = data.Name.Trim();
                         // Console.WriteLine($" Item Name: {name}, Rice = {data.Price,2:c} Quantity: {data.Quantity}");
-                        Console.WriteLine($"  Invoice Number: {data.InvoiceID} Item Name: {data.Name.Trim()}, Rrice = {data.Price,2:c} Quantity: {data.Quantity}");
+                        Console.WriteLine($"  Item Number: {data.ItemId} Item Name: {data.Name.Trim()}, Rrice = {data.Price,2:c} Quantity: {data.Quantity}");
                     }
+                }
+                Console.WriteLine("Do you want to Modify any Item y/n?");
+                if (Console.ReadLine() == "y")
+                {
+                    Console.WriteLine("Please enter Item no : ");
+                    int ItemId = Convert.ToInt32(Console.ReadLine());
+                    Item newItem = db.Items.Find(ItemId);
+                   
+                    //newItem.InvoiceID = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Please enter Item Name    : ");
+                    newItem.Name = Console.ReadLine();
+                    Console.WriteLine("Please enter Item Price   : ");
+                    newItem.Price = Convert.ToDecimal(Console.ReadLine());
+                    Console.WriteLine("Please enter Item Quantity:");
+                    newItem.Quantity = Convert.ToInt32(Console.ReadLine());
+                    
+                   
+                    db.SaveChanges();
+
+                }
+                Console.WriteLine("Do you want to Delete any Item y/n?");
+                if (Console.ReadLine() == "y")
+                {
+                    Console.WriteLine("Please enter Item no : ");
+                    int ItemId = Convert.ToInt32(Console.ReadLine());
+                    
+                        Item newItem = db.Items.Find(ItemId);
+
+                        db.Items.Remove(newItem);
+
+                        db.SaveChanges();
+                   
+
                 }
 
             }
