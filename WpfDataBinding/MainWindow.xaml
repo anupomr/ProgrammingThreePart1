@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:WpfDataBinding"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+    <UniformGrid Columns="3" Rows="3" Button.Click="ButtonHandler">
+        <UniformGrid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="Aquamarine"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+        </UniformGrid.Resources>
+        <Button x:Name="via_code" Content="Without Data Binding"/>
+        <Button x:Name="one_way_to_source" Content="One way to source"/>
+        <Button x:Name="one_way_to_target" Content="One way to target"/>
+        <Button x:Name="one_time_to_target" Content="One time to target"/>
+        <Button x:Name="two_way" Content="Two way"/>
+        <TextBlock TextWrapping="Wrap" Text="The slider is the data source and the textbox in the data target."  Margin="5"/>
+    </UniformGrid>
 </Window>
