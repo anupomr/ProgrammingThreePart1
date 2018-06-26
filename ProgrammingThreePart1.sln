@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceApp", "InvoiceApp\In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqTermOnePrac", "LinqTermOnePrac\LinqTermOnePrac.csproj", "{ACD39546-3280-4EE2-AFA6-82FDCE579059}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQquery", "LINQquery\LINQquery.csproj", "{896672A3-9ACD-440D-BE3C-3B850344A8E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{ACD39546-3280-4EE2-AFA6-82FDCE579059}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACD39546-3280-4EE2-AFA6-82FDCE579059}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACD39546-3280-4EE2-AFA6-82FDCE579059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{896672A3-9ACD-440D-BE3C-3B850344A8E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{896672A3-9ACD-440D-BE3C-3B850344A8E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{896672A3-9ACD-440D-BE3C-3B850344A8E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{896672A3-9ACD-440D-BE3C-3B850344A8E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{87C0ADDE-EE93-4A8D-AC6B-FFFBD92F65F4} = {A0D76A94-C4E2-48B1-9BEB-7F141DFE2C86}
 		{712A2583-A8B2-460D-8E1A-6D011E300969} = {68EDA169-8BF7-4703-81E2-C20FD78494B0}
 		{ACD39546-3280-4EE2-AFA6-82FDCE579059} = {8AF1FB70-EEEC-4477-8769-C828A96BE0F7}
+		{896672A3-9ACD-440D-BE3C-3B850344A8E7} = {C6EBEB43-A3FC-4446-816A-2795FA7C272A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AAD4D483-7640-4AB3-9519-455134272434}
