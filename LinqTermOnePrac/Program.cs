@@ -10,7 +10,36 @@ namespace LinqTermOnePrac
     {
         static void Main(string[] args)
         {
-            
+            List<Country> countries = Country.GetCountries();
+
+            #region Version SMS
+            //Query  - query to return the names of the countries in 
+            //descending order of number of resources
+            Console.WriteLine("\n\nCountry names in decreasing number of resources");
+            var countriesRessources = countries.OrderByDescending(x => x.Resources.Count);
+            foreach (var item in countriesRessources)
+            {
+                Console.WriteLine($"{item.Name} - {item.Resources.Count} resource(s)");
+            }
+            Console.ReadLine();
+
+            //Query  - query to return the names of the landlock countries
+            Console.WriteLine("\n\nAll countries the landlock countries");
+            var landlockCountry = countries.Where(x => x.IsLandLocked).Select(x => x.Name);
+            foreach (var item in landlockCountry)
+            {
+                Console.WriteLine($"{item}");
+            }
+
+            Console.ReadLine();
+
+            //Query  - the country with highest population density.
+            //Density = popuation / land area
+            Console.WriteLine("\n\nCountry with the highest population density");
+            Country country = countries.Aggregate((big, next) => (next.Population / next.Land) > (big.Population / big.Land) ? next : big);
+            Console.WriteLine(country);
+
+            #endregion   
         }
     }
     class Country
