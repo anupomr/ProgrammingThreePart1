@@ -60,6 +60,15 @@
     <Compile Include="winOneWayToSource.xaml.cs">
       <DependentUpon>winOneWayToSource.xaml</DependentUpon>
     </Compile>
+    <Compile Include="winOneWayToTarget.xaml.cs">
+      <DependentUpon>winOneWayToTarget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winTwoWay.xaml.cs">
+      <DependentUpon>winTwoWay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winWithoutDataBinding.xaml.cs">
+      <DependentUpon>winWithoutDataBinding.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -77,6 +86,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="winOneWayToSource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winOneWayToTarget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winTwoWay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winWithoutDataBinding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

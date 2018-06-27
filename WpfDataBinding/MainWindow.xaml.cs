@@ -24,5 +24,27 @@ namespace WpfDataBinding
         {
             InitializeComponent();
         }
+        private void ButtonHandler(object sender, RoutedEventArgs e)
+        {
+            FrameworkElement fe = e.Source as FrameworkElement;
+            switch (fe.Name)
+            {
+                case "one_way_to_source":
+                    new winOneWayToSource().ShowDialog();
+                    break;
+                case "two_way":
+                    new winTwoWay().ShowDialog();
+                    break;
+                case "one_way_to_target":
+                    new winOneWayToTarget().ShowDialog();
+                    break;
+                case "one_time_to_target":
+                    new winOneTimeToTarget().ShowDialog();
+                    break;
+                case "via_code":
+                    new winWithoutDataBinding().ShowDialog();
+                    break;
+            }
+        }
     }
 }

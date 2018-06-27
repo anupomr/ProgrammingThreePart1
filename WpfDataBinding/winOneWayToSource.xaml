@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfDataBinding"
         mc:Ignorable="d"
-        Title="winOneWayToSource" Height="300" Width="300">
+        Title="One Way To Source" Height="300" Width="300">
     <StackPanel Margin="10, 20">
         <Slider x:Name="SliderSource" IsSnapToTickEnabled="True" Minimum="0" Maximum="100"/>
         <TextBox x:Name="TextBoxTarget" Width="50" Text="{Binding ElementName=SliderSource, Path=Value, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" />
