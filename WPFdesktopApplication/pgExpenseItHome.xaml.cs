@@ -24,5 +24,14 @@ namespace WPFdesktopApplication
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //NavigationService.Navigate(new pgExpenseReportPage());
+            // View Expense Report
+            NavigationService.Navigate(new pgExpenseReportPage(peopleListBox.SelectedItem));
+        }
+
     }
 }
+
