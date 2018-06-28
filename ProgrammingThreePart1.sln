@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFdesktopApplication", "WP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDataBinding", "WpfDataBinding\WpfDataBinding.csproj", "{C8621CF5-8D26-408E-B3BA-D96004E4BD94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodSyntaxLab11", "MethodSyntaxLab11\MethodSyntaxLab11.csproj", "{B48D07A8-551F-47C1-9405-85B567C24FA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{C8621CF5-8D26-408E-B3BA-D96004E4BD94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8621CF5-8D26-408E-B3BA-D96004E4BD94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8621CF5-8D26-408E-B3BA-D96004E4BD94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B48D07A8-551F-47C1-9405-85B567C24FA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B48D07A8-551F-47C1-9405-85B567C24FA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B48D07A8-551F-47C1-9405-85B567C24FA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B48D07A8-551F-47C1-9405-85B567C24FA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +90,7 @@ Global
 		{896672A3-9ACD-440D-BE3C-3B850344A8E7} = {C6EBEB43-A3FC-4446-816A-2795FA7C272A}
 		{7B078B11-F78F-4C40-927C-051F845A6805} = {EE83297B-4A2C-4BCB-B776-57B2059735B8}
 		{C8621CF5-8D26-408E-B3BA-D96004E4BD94} = {EE83297B-4A2C-4BCB-B776-57B2059735B8}
+		{B48D07A8-551F-47C1-9405-85B567C24FA1} = {C6EBEB43-A3FC-4446-816A-2795FA7C272A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AAD4D483-7640-4AB3-9519-455134272434}
