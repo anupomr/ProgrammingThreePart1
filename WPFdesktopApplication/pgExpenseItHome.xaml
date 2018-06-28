@@ -19,13 +19,11 @@
                             <Expense ExpenseType="Transportation" ExpenseAmount="50" />
                         </Person>
                         <Person Name="Lisa" Department="Marketing">
-                            <Expense ExpenseType="Document printing"
-      ExpenseAmount="50"/>
+                            <Expense ExpenseType="Document printing" ExpenseAmount="50"/>
                             <Expense ExpenseType="Gift" ExpenseAmount="125" />
                         </Person>
                         <Person Name="John" Department="Engineering">
-                            <Expense ExpenseType="Magazine subscription" 
-     ExpenseAmount="50"/>
+                            <Expense ExpenseType="Magazine subscription" ExpenseAmount="50"/>
                             <Expense ExpenseType="New machine" ExpenseAmount="600" />
                             <Expense ExpenseType="Software" ExpenseAmount="500" />
                         </Person>

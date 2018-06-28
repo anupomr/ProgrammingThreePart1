@@ -23,6 +23,99 @@ namespace LINQquery
     {
         static void Main(string[] args)
         {
+            /*
+             1.	Show the persons with assets of over 50B dollars. 7 Persons*/
+
+            var r1 = from p in persons where p.Asset > 50 select p;
+            foreach (var item in r1)
+            {
+                Console.WriteLine(item);
+            }
+            /*
+            2.	Show all non-US citizens. 21 Persons*/
+            var nonUS = from p in persons where p.Country != "US" select p;
+            foreach (var item in nonUS)
+            {
+                Console.WriteLine(item);
+            }
+            /*
+            3.	Show all females from India. 3 Names*/
+            var fIndia = from p in persons where p.IsFemale && p.Country == "India" select p;
+            foreach (var item in fIndia)
+            {
+                Console.WriteLine(item);
+            }
+            /*
+            Your query should only capture the person’s name. (This is a projection query)*/
+            var pName = from p in persons select $"{ p.Name}";
+            Console.WriteLine("************************");
+            foreach (var item in pName)
+            {
+                Console.WriteLine(item);
+            }
+            /*
+            4.	Show all persons whose first name is less than five letters long.*/
+            var first_name = from p in persons where p.Name.Split()[0].Length < 5 select p;
+            foreach (var item in first_name)
+            {
+                Console.WriteLine(item);
+            }
+            /*
+            5.	Sort the collection by assets. 
+            Your query should only capture the person’s name and asset.*/
+
+            var collectionSort = from p in persons
+                                 orderby p.Asset
+                                 select p;
+            foreach (var item in collectionSort)
+            {
+                Console.WriteLine($"Name: { item.Name} Asset = {item.Asset}");
+            }
+            /*
+            6.	Group the collection by country.*/
+            var groupByCountry = from p in persons
+                                 group p by p.Country into counrtyGroup
+                                 select counrtyGroup;
+            foreach (var group in groupByCountry)
+            {
+                foreach (var item in group)
+                {
+                    Console.WriteLine(item);
+                }
+
+            }
+            /*
+            7.	Sort the above grouping.*/
+            groupByCountry = from p in persons
+                             orderby p.Name descending
+                             group p by p.Country
+                                into counrtyGroup
+                             select counrtyGroup;
+            foreach (var group in groupByCountry)
+            {
+                foreach (var item in group)
+                {
+                    Console.WriteLine($"{item}");
+                }
+
+            }
+
+            /*
+            8.	Make up two queries of your own.
+            You will not get a mark if you do a simple filter or order!!!
+
+             */
+
+        }
+        static void YongLady()
+        {
+            var youngLady = from p in persons
+                            where p.IsFemale && p.Age < 40
+                            select new { p.Name, p.Age, p.Asset };
+            foreach (var item in youngLady)
+            {
+                Console.WriteLine(item);
+            }
         }
         static List<Person> persons = new List<Person>()
         {
@@ -65,5 +158,9 @@ namespace LINQquery
           new Person(){ Age = 60, Asset = 86.0, Country = "US", IsFemale=false, Name="Bill Gates"}
         };
 
+
+
     }
+   
+    
 }
